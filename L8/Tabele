@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tabele ze scalonymi komórkami</title>
+<style>
+  body { font-family: Arial, Helvetica, sans-serif; background: #f4f6f8; color: #222; margin: 0; padding: 24px; }
+  h1 { text-align: center; margin-bottom: 4px; }
+  p.opis { text-align: center; color: #555; margin-top: 0; }
+  section { background: #fff; max-width: 900px; margin: 24px auto; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,.1); overflow-x: auto; }
+  h2 { margin-top: 0; font-size: 18px; }
+  table { border-collapse: collapse; margin: 0 auto; }
+  th, td { border: 1px solid #444; text-align: center; width: 60px; height: 48px; font-size: 18px; }
+  th { background: #cfe8fc; font-weight: normal; }
+  .b1 { background: #eaf1dd; }   
+  .b2 { background: #d7e4bd; }   
+  .b3 { background: #c4d79b; }   
+  .inicjal { background: #9bbb59; }
+  .puste { background: #fff; }
+  .tabela3 td, .tabela3 th { width: 42px; height: 36px; font-size: 14px; }
+  .tabela3 td.przerwa { border: none; background: transparent; }
+</style>
+</head>
+<body>
+
+
+<section>
+  <h2>Tabela 1 – komórki niescalone</h2>
+  <table>
+    <tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr>
+    <tr><th>2</th><td>a</td><td class="b1">b</td><td class="b1">c</td><td>d</td><td>e</td></tr>
+    <tr><th>3</th><td>f</td><td>g</td><td>h</td><td>i</td><td class="b2">j</td></tr>
+    <tr><th>4</th><td>k</td><td>l</td><td>m</td><td>n</td><td class="b2">o</td></tr>
+    <tr><th>5</th><td class="b3">p</td><td class="b3">q</td><td class="b3">r</td><td>s</td><td>t</td></tr>
+    <tr><th>6</th><td class="b3">u</td><td class="b3">v</td><td class="b3">w</td><td>y</td><td>z</td></tr>
+  </table>
+</section>
+
+
+<section>
+  <h2>Tabela 2 – komórki scalone</h2>
+  <table>
+    <tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr>
+    <tr><th>2</th><td>a</td><td class="b1" colspan="2">b, c</td><td>d</td><td>e</td></tr>
+    <tr><th>3</th><td>f</td><td>g</td><td>h</td><td>i</td><td class="b2" rowspan="2">j, o</td></tr>
+    <tr><th>4</th><td>k</td><td>l</td><td>m</td><td>n</td></tr>
+    <tr><th>5</th><td class="b3" colspan="3" rowspan="2">p, q, r, u, v, w</td><td>s</td><td>t</td></tr>
+    <tr><th>6</th><td>y</td><td>z</td></tr>
+  </table>
+</section>
+
+
+<section>
+  <h2>Tabela 3 – inicjały</h2>
+  <table>
+    <tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr>
+    <tr><th>2</th><td>a</td><td>b</td><td>c</td><td>d</td><td>e</td></tr>
+    <tr><th>3</th><td>f</td><td>g</td><td>h</td><td>i</td><td>j</td></tr>
+    <tr><th>4</th><td>k</td><td>l</td><td>m</td><td>n</td><td>o</td></tr>
+    <tr><th>5</th><td class="b2" colspan="4" rowspan="1">p, q, r, s</td><td>t</td></tr>
+    <tr><th>6</th><td>u</td><td>v</td><td>w</td><td>y</td><td>z</td></tr>
+  </table>
+</section>
+
+</body>
+</html>
