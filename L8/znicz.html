@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pamiętamy</title>
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #171923;
+    color: #f5e8d5;
+    font-family: Georgia, serif;
+    text-align: center;
+  }
+  h1 { font-weight: normal; letter-spacing: 3px; }
+  .candle {
+    position: relative;
+    width: 90px;
+    height: 150px;
+    margin-top: 70px;
+    background: #d69a59;
+    border: 3px solid #f0c58f;
+    border-radius: 10px 10px 5px 5px;
+    box-shadow: 0 0 35px #b8793b;
+  }
+  .flame {
+    position: absolute;
+    width: 28px;
+    height: 48px;
+    left: 31px;
+    top: -58px;
+    background: #ffb52e;
+    border-radius: 50% 50% 50% 50%;
+    box-shadow: 0 0 25px #ff9d26;
+    animation: flicker 0.8s infinite alternate;
+  }
+  @keyframes flicker {
+    from { transform: rotate(-5deg) scale(0.95); }
+    to { transform: rotate(5deg) scale(1.05); }
+  }
+  p { margin: 35px 20px 0; font-size: 20px; }
+</style>
+</head>
+<body>
+  <h1>Światło pamięci</h1>
+  <div class="candle" role="img" aria-label="Płonący znicz">
+    <div class="flame"></div>
+  </div>
+  <p>Pamięć o bliskich nigdy nie gaśnie.</p>
+</body>
+</html>
